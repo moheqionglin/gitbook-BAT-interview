@@ -1,0 +1,43 @@
+{
+	"title" : "墨荷笔谈",
+	"author" : "moheqionglin",
+	"description" : "记录Gitbook的配置和一些插件的使用",
+	"language" : "zh-hans",
+	"links" : {
+	    "sidebar" : {
+	        "Home" : "http://moheqionglin.com"
+	    }
+	},
+	"plugins": [
+    "mermaid-gb3","puml","chart","todo","terminal","graph","page-toc","tbfed-pagefooter","page-toc-button"
+	],
+
+	"pluginsConfig": {
+	    "disqus": {
+	        "shortName": "gitbookuse"
+	    },
+	    "chart": {
+            "type": "c3"
+        },
+        "terminal": {
+            "copyButtons": true,
+            "fade": false,
+            "style": "flat"
+        },
+        "page-toc-button": {
+            "maxTocDepth": 2,
+            "minTocSize": 2
+        },
+        "tbfed-pagefooter": {
+            "copyright": "Copyright &copy moheqionglin/wanli.zhou 2019",
+            "modify_label": "该文件修订时间：",
+            "modify_format": "YYYY-MM-DD HH:mm:ss"
+        },
+        "page-toc": {
+			      "selector": ".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4",
+			      "position": "before-first",
+			      "showByDefault": true
+    		}
+	}
+
+}

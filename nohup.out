@@ -1,0 +1,39 @@
+Live reload server started on port: 35729
+Press CTRL+C to quit ...
+
+[0;36minfo:[0m 7 plugins are installed 
+[0;36minfo:[0m loading plugin "livereload"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "highlight"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "search"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "lunr"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "sharing"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "fontsettings"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "theme-default"... [0;32mOK[0m 
+[0;36minfo:[0m found 2 pages 
+[0;36minfo:[0m found 1 asset files 
+[0;36minfo:[0m [0;32m>> [0mgeneration finished with success in 0.8s ! 
+
+Starting server ...
+Serving book on http://localhost:4000
+Restart after change in file SUMMARY.md
+
+Stopping server
+[0;36minfo:[0m 7 plugins are installed 
+[0;36minfo:[0m loading plugin "livereload"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "highlight"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "search"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "lunr"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "sharing"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "fontsettings"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "theme-default"... [0;32mOK[0m 
+[0;36minfo:[0m found 2 pages 
+[0;36minfo:[0m found 1 asset files 
+[0;36minfo:[0m [0;32m>> [0mgeneration finished with success in 0.3s ! 
+
+Starting server ...
+Serving book on http://localhost:4000
+Restart after change in file book.json
+
+Stopping server
+
+[0;31mSyntaxError: /Users/wanli.zhou/Workspace/gitbook/book.json: Unexpected end of JSON input[0m
