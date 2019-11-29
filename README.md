@@ -1,9 +1,8 @@
 #记录点滴
+
 ![img][1]
 
 
-
-[1]: images/index-1.jpeg# Summary
 
 * [Introduction](README.md)
 
@@ -91,3 +90,5 @@
 --
 * kafka
 	* [kafka broker倾斜问题解决方案](kafka/kafka-skew.md)	
+
+[1]: images/index-1.jpeg# Summary
