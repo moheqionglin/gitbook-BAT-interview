@@ -1,6 +1,6 @@
 #记录点滴
 
-![img][1]
+![img][images/index-1.jpeg]
 
 
 
