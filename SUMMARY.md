@@ -1,10 +1,10 @@
 # Summary
 
 * [Introduction](README.md)
-
+	* [total](total.md)
 * [正文](part2/README.md)
     * [hbase 文章](part/hbase.md)
-
+	
     
 --
 
@@ -19,9 +19,15 @@
 	
 --
 * spring
+	* [本地源码搭建](spring/spring-source.md) 
 	* [spring 生命周期](spring/life-cycle.md)
+	* [spring AOP植入](spring/spring-aop.md)
 	* [spring 事务](spring/spring-transaction.md)
-
+* dubbo
+	* [dubbo 扩展SPI](dubbo/dubbo-extension-spi.md)
+	* [dubbo使用的一些细节](dubbo/dubbo-use.md)
+	
+	
 --
 * 算法
 	* [位运算的应用](algorithm/algorithm.md)
@@ -79,10 +85,18 @@
 		* [redis缓存和数据库一致性](concurrent/cache-consistent.md)
 	
 * JVM
+	* [JVM 概述](jvm/jvm-struct.md)
 	* [metaspace空间](jvm/jvm-metaspace.md)
-	
+	* [JVM指令集和javap查看编译后的文件](jvm/jvm-instruction.md)
+	* [jvm 加载器](jvm/jvm-class-loader.md)
+	* [jvm热加载原理](jvm/jvm-hot-reload.md)
 
 	
 --
 * kafka
-	* [kafka broker倾斜问题解决方案](kafka/kafka-skew.md)	
+	* [kafka broker倾斜问题解决方案](kafka/kafka-skew.md)
+
+
+* shell
+	* [shell编程](shell/shell.md)
+ 
