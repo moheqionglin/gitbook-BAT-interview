@@ -4,7 +4,7 @@
 	* [total](total.md)
 * [正文](part2/README.md)
     * [hbase 文章](part/hbase.md)
-	
+* [性能排查](performence.md)	
     
 --
 
@@ -21,13 +21,15 @@
 * spring
 	* [本地源码搭建](spring/spring-source.md) 
 	* [spring 生命周期](spring/life-cycle.md)
+	* [spring 向容器中增加bean方式](spring/spring-beans.md)
 	* [spring AOP植入](spring/spring-aop.md)
 	* [spring 事务](spring/spring-transaction.md)
 * dubbo
 	* [dubbo 扩展SPI](dubbo/dubbo-extension-spi.md)
 	* [dubbo使用的一些细节](dubbo/dubbo-use.md)
 	
-	
+* mybatis
+	*[mybatis 官方资料](mybatis/mybatis-index.md)	
 --
 * 算法
 	* [位运算的应用](algorithm/algorithm.md)
@@ -99,4 +101,10 @@
 
 * shell
 	* [shell编程](shell/shell.md)
- 
+	
+* 应用类
+	* [小程序申请](app/xiaochengxu.md)
+	* [小程序申请支付](app/xiaochengxu-pay.md)
+	* [字词句](app/xiaochengxu-statement.md)
+	* [easy-mock](app/easy-mock.md)
+	* [centos 安装 docker，docker-compose](app/centos-docker.md)

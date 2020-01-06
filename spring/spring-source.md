@@ -1,5 +1,5 @@
 ### 下载spring-5.1.x 源码
-
+http://note.youdao.com/ynoteshare1/index.html?id=c3f11aab5e0a0083709cc64984a3c41a
 
 ```
 # 注意一定要选好branch到 5.1.x，否则会出现本文意外的异常。
@@ -90,6 +90,119 @@ Import into IntelliJ (File -> New -> Project from Existing Sources -> Navigate t
 
 然后等待漫长的下载各种依赖的过程。
 
+### 预编译`spring-core` and `spring-oxm`
+
+```
+#在IDEA左侧的gradle工具中
+spring --> spring-oxm --> Tasks --> compileTestJava
+spring --> spring-core --> Tasks --> compileTestJava
+
+```
+### 终极编译
+
+注释掉Could not resolve all files for configuration ':asciidoctor'.
+
+```
+# 找到文件docs.gradle
+//dokka {
+//	dependsOn {
+//		tasks.getByName("api")
+//	}
+//	doFirst {
+//		classpath = subprojects.collect { project -> project.jar.outputs.files.getFiles() }.flatten()
+//		classpath += files(subprojects.collect { it.sourceSets.main.compileClasspath })
+//
+//	}
+//	moduleName = "spring-framework"
+//	outputFormat = "html"
+//	outputDirectory = "$buildDir/docs/kdoc"
+//
+//	sourceDirs = files(subprojects.collect { project ->
+//		def kotlinDirs = project.sourceSets.main.kotlin.srcDirs.collect()
+//		kotlinDirs -= project.sourceSets.main.java.srcDirs
+//	})
+//	externalDocumentationLink {
+//		url = new URL("https://docs.spring.io/spring-framework/docs/$version/javadoc-api/")
+//		packageListUrl = new File(buildDir, "api/package-list").toURI().toURL()
+//	}
+//	externalDocumentationLink {
+//		url = new URL("https://projectreactor.io/docs/core/release/api/")
+//	}
+//	externalDocumentationLink {
+//		url = new URL("https://www.reactive-streams.org/reactive-streams-1.0.1-javadoc/")
+//	}
+//}
+//
+//asciidoctor {
+//	sources {
+//		include '*.adoc'
+//	}
+//	resources {
+//		from(sourceDir) {
+//			include 'images/*', 'stylesheets/*', 'tocbot-3.0.2/*'
+//		}
+//	}
+//	logDocuments = true
+//	backends = ["html5"]
+//	// only ouput PDF documentation for non-SNAPSHOT builds
+//	if(!project.getVersion().toString().contains("BUILD-SNAPSHOT")) {
+//		backends += "pdf"
+//	}
+//	options doctype: 'book', eruby: 'erubis'
+//	attributes  'icons': 'font',
+//			'idprefix': '',
+//			'idseparator': '-',
+//			docinfo: '',
+//			revnumber: project.version,
+//			sectanchors: '',
+//			sectnums: '',
+//			'source-highlighter': 'coderay@', // TODO switch to 'rouge' once supported by the html5 backend
+//			stylesdir: 'stylesheets/',
+//			stylesheet: 'main.css',
+//			'spring-version': project.version
+//
+//}
+
+
+//
+//asciidoctor {
+//	sources {
+//		include '*.adoc'
+//	}
+//	resources {
+//		from(sourceDir) {
+//			include 'images/*', 'stylesheets/*', 'tocbot-3.0.2/*'
+//		}
+//	}
+//	logDocuments = true
+//	backends = ["html5"]
+//	// only ouput PDF documentation for non-SNAPSHOT builds
+//	if(!project.getVersion().toString().contains("BUILD-SNAPSHOT")) {
+//		backends += "pdf"
+//	}
+//	options doctype: 'book', eruby: 'erubis'
+//	attributes  'icons': 'font',
+//			'idprefix': '',
+//			'idseparator': '-',
+//			docinfo: '',
+//			revnumber: project.version,
+//			sectanchors: '',
+//			sectnums: '',
+//			'source-highlighter': 'coderay@', // TODO switch to 'rouge' once supported by the html5 backend
+//			stylesdir: 'stylesheets/',
+//			stylesheet: 'main.css',
+//			'spring-version': project.version
+//
+//}
+
+```
+
+
+```
+#直接编译，不用管网上说 spring-aop会因为什么aspectj原因编译不通不过。
+spring --> Tasks --> build
+# 时间会持续20分钟
+```
 
 
 [1]: https://github.com/spring-projects/spring-framework
