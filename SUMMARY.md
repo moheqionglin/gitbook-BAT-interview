@@ -92,8 +92,12 @@
 	* [JVM指令集和javap查看编译后的文件](jvm/jvm-instruction.md)
 	* [jvm 加载器](jvm/jvm-class-loader.md)
 	* [jvm热加载原理](jvm/jvm-hot-reload.md)
-
-	
+* DevOps
+	* [DevOps](devops/devops.md)
+	* [日志收集](devops/log-collect.md)
+	* [JMX 收集](devops/JMX-monitor.md) 
+	* [linux运维必会命令](devops/linux运维必会命1令.md) 
+ 
 --
 * kafka
 	* [kafka broker倾斜问题解决方案](kafka/kafka-skew.md)

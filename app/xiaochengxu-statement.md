@@ -6,7 +6,7 @@ https://www.runoob.com/w3cnote/flex-grammar.html
 	- for  [wx:for][1] 
 		- ```<block wx:for="{{varName}}">i {{customName}}</block>``` 一般wx:for用<block>标签配合，因为不渲染block。 
 			- ```<block wx:for="{{varName}}" wx:for-itme="customName" wx:for-index="i" ></block>``` 一般循环套循环的时候才会给外层的for起一个别名。
-			- <block wx:for="{{}}" wx:key> 提高虚拟dom的diff算法
+			- <block wx:for="{{xx}}" wx:key> 提高虚拟dom的diff算法
 				
 		- 支持类似于 for(int i =0; i < 10; i ++) ```<block wx:for="{{9}}"></block>```
 		- 支持字符串遍历 ```<block wx:for="abcd"></block>```
@@ -23,7 +23,7 @@ https://www.runoob.com/w3cnote/flex-grammar.html
 	-	App onLaunch （只执行一次）-> onShow -> onHide -> onError 
 	-	Page onLoad（页面生命周期内只执行一次） -> onShow -> onReady -> onHide -> onUnLoad
 
--	{{}} 里面不能调用js函数，只能调用wxs
+-	{{xx}} 里面不能调用js函数，只能调用wxs
 	-	[wxs][2] 可以定义一个wxs文件
 	-  一般定义一些工具，比如时间戳格式化，价格格式化。
 	
