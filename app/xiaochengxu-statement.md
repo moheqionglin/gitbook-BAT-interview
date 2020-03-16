@@ -255,6 +255,60 @@ onPullDownRefresh: function () {
  
   },
 ```
+### 坑1 scroll-view高度设置没用
+```
+小程序的scroll-view 高度必须动态
+<scroll-view style="height: {{scrollViewHeight}}px" scroll-y="true">
+  <!-- scroll-view里面的内容 -->
+</scroll-view>
+ 
+ 计算
+
+onLoad: function(option) {
+
+        // 先取出页面高度 windowHeight
+        wx.getSystemInfo({
+            success: function(res) {
+                that.setData({
+                    windowHeight: res.windowHeight
+                });
+            }
+        });
+
+        // 然后取出navbar和header的高度
+        // 根据文档，先创建一个SelectorQuery对象实例
+        let query = wx.createSelectorQuery().in(this);
+        // 然后逐个取出navbar和header的节点信息
+        // 选择器的语法与jQuery语法相同
+        query.select('#navbar').boundingClientRect();
+        query.select('#header').boundingClientRect();
+
+        // 执行上面所指定的请求，结果会按照顺序存放于一个数组中，在callback的第一个参数中返回
+        query.exec((res) => {
+            // 分别取出navbar和header的高度
+            let navbarHeight = res[0].height;
+            let headerHeight = res[1].height;
+
+            // 然后就是做个减法
+            let scrollViewHeight = this.data.windowHeight - navbarHeight - headerHeight;
+
+            // 算出来之后存到data对象里面
+            this.setData({
+                scrollViewHeight: scrollViewHeight
+            });
+        });
+    }
+    
+```
+
+## 小程序 onShow， 即使是弹出框，关闭也会触发。
+## 小程序 placeholder/输入内容不随textarea组件滚动
+```
+# 注意这里必须要用 wx:if + focus 要不然要点击两下才会拉起键盘输入
+<view wx:if="{{item.hiddenTextarea}}" class="H4" style="height: 120rpx; margin-top: 20rpx" data-id="{{item.id}}" catchtap="clickCommentView">{{ productComments[index].comment|| '满意就好无保留的夸一夸吧~'}}</view>
+<textarea fixed placeholder="满意就好无保留的夸一夸吧~" placeholder-class="H4" data-id = "{{item.productId}}" bindinput="typeComment" bindblur ="blurCommentTa" class="H3" wx:if="{{!item.hiddenTextarea}}" focus="{{!item.hiddenTextarea}}"></textarea>
+
+```
 
 [1]: https://developers.weixin.qq.com/miniprogram/dev/reference/wxml/list.html
 [2]: https://developers.weixin.qq.com/miniprogram/dev/reference/wxs/
