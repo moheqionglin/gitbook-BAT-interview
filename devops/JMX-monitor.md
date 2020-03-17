@@ -95,6 +95,7 @@ nohup java -cp ./jmxmon-0.0.2-jar-with-dependencies.jar com.stephan.tof.jmxmon.J
 
 ```
 
+
 ### 监控明细
 
 详情见 [Linux运维基础采集项][7]
@@ -113,8 +114,112 @@ nohup java -cp ./jmxmon-0.0.2-jar-with-dependencies.jar com.stephan.tof.jmxmon.J
 | new.gen.promotion |	GAUGE |	一分钟内，新生代的内存晋升总大小 |
 | new.gen.avg.promotion |	GAUGE |	一分钟内，平均每次YoungGC的新生代内存晋升大小 |
 
+具体数据包如下：
 
+```
+[
+    {
+        "metric":"parnew.gc.avg.time",
+        "endpoint":"sm-service-server1",
+        "timestamp":1584413025,
+        "step":60,
+        "value":16,
+        "counterType":"GAUGE",
+        "tags":"jmxport=10100"
+    },
+    {
+        "metric":"parnew.gc.count",
+        "endpoint":"sm-service-server1",
+        "timestamp":1584413025,
+        "step":60,
+        "value":2,
+        "counterType":"GAUGE",
+        "tags":"jmxport=10100"
+    },
+    {
+        "metric":"concurrentmarksweep.gc.avg.time",
+        "endpoint":"sm-service-server1",
+        "timestamp":1584413025,
+        "step":60,
+        "value":0,
+        "counterType":"GAUGE",
+        "tags":"jmxport=10100"
+    },
+    {
+        "metric":"concurrentmarksweep.gc.count",
+        "endpoint":"sm-service-server1",
+        "timestamp":1584413025,
+        "step":60,
+        "value":0,
+        "counterType":"GAUGE",
+        "tags":"jmxport=10100"
+    },
+    {
+        "metric":"gc.throughput",
+        "endpoint":"sm-service-server1",
+        "timestamp":1584413025,
+        "step":60,
+        "value":99.94,
+        "counterType":"GAUGE",
+        "tags":"jmxport=10100"
+    },
+    {
+        "metric":"old.gen.mem.used",
+        "endpoint":"sm-service-server1",
+        "timestamp":1584413025,
+        "step":60,
+        "value":113427096,
+        "counterType":"GAUGE",
+        "tags":"jmxport=10100"
+    },
+    {
+        "metric":"old.gen.mem.ratio",
+        "endpoint":"sm-service-server1",
+        "timestamp":1584413025,
+        "step":60,
+        "value":11.3,
+        "counterType":"GAUGE",
+        "tags":"jmxport=10100"
+    },
+    {
+        "metric":"new.gen.promotion",
+        "endpoint":"sm-service-server1",
+        "timestamp":1584413025,
+        "step":60,
+        "value":64,
+        "counterType":"GAUGE",
+        "tags":"jmxport=10100"
+    },
+    {
+        "metric":"new.gen.avg.promotion",
+        "endpoint":"sm-service-server1",
+        "timestamp":1584413025,
+        "step":60,
+        "value":32,
+        "counterType":"GAUGE",
+        "tags":"jmxport=10100"
+    },
+    {
+        "metric":"thread.active.count",
+        "endpoint":"sm-service-server1",
+        "timestamp":1584413025,
+        "step":60,
+        "value":101,
+        "counterType":"GAUGE",
+        "tags":"jmxport=10100"
+    },
+    {
+        "metric":"thread.peak.count",
+        "endpoint":"sm-service-server1",
+        "timestamp":1584413025,
+        "step":60,
+        "value":135,
+        "counterType":"GAUGE",
+        "tags":"jmxport=10100"
+    }
+]
 
+```
 
 
 [1]: https://github.com/open-falcon/falcon-plus/releases

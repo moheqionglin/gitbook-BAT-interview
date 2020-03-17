@@ -97,7 +97,7 @@
 	* [日志收集](devops/log-collect.md)
 	* [JMX 收集](devops/JMX-monitor.md) 
 	* [linux运维必会命令](devops/linux运维必会命1令.md) 
- 
+    * [remote-controll](devops/remote-controll.md)
 --
 * kafka
 	* [kafka broker倾斜问题解决方案](kafka/kafka-skew.md)
@@ -109,6 +109,7 @@
 * 应用类
 	* [小程序申请](app/xiaochengxu.md)
 	* [小程序申请支付](app/xiaochengxu-pay.md)
+	* [小程序申请并配置免费证书](购买免费的ssl证书.md)
 	* [字词句](app/xiaochengxu-statement.md)
 	* [easy-mock](app/easy-mock.md)
 	* [centos 安装 docker，docker-compose](app/centos-docker.md)
