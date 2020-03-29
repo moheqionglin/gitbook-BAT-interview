@@ -45,6 +45,11 @@
 
 --
 
+* 协议破解
+   * [postgresql V3 协议破解](netty/mock-postgresql-v3-server.md)
+
+--
+
 * 高并发
 	* [Java Memory Modle内存模型]
 		* [线程，进程](concurrent/java-thread.md)
@@ -98,7 +103,17 @@
 	* [JMX 收集](devops/JMX-monitor.md) 
 	* [linux运维必会命令](devops/linux运维必会命1令.md) 
     * [remote-controll](devops/remote-controll.md)
+    * [统一打包部署](devops/deploy.md)
+    * [中央配置](devops/center-config-spring-client.md)
+    * [dubbo 生产级配置](devops/dubbo-rpc.md)
+    * [高并发生产性能](devops/performance.md)
+    * [logback spring，非spring配置，异步配置](devops/logback.md)
+    * [Mac开发环境快速搭建技巧](devops/Mac开发环境快速搭建.md)
+    * [curator zookeeper](curator-zookeeper.md) 
+ 
+    
 --
+
 * kafka
 	* [kafka broker倾斜问题解决方案](kafka/kafka-skew.md)
 

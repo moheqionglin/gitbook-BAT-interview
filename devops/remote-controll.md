@@ -12,5 +12,5 @@
 
 
 
-[1]: https://github.com/moheqionglin/spring-demo/tree/master/spring-test/src/main/java/com/moheqionglin/remotecontroller
+[1]: https://github.com/moheqionglin/spring-demo/tree/master/devops/devops-service/src/main/java/com/moheqionglin/remotecontroll
 [2]: ../images/spring/remoteControllerTelnet.jpg

@@ -85,7 +85,7 @@ jmx.ports=10320
 
 # agent port url
 agent.posturl=http://localhost:1988/v1/push
-hostname=locationxservicetestdev-vbj01c-1
+hostname=host-1
 
 ```
 

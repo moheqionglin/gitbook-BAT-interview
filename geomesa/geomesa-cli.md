@@ -1,6 +1,6 @@
 ## 1. catalog和SimpleFeatureType创建
 ```
-./geomesa-hbase create-schema -c 'findtest:locationx' -s "bizid:String:index=true,biztime:Date,*bizpoint:Point:srid=4326;geomesa.attr.splits='11',geomesa.indices='attr:8:3:bizid:geom:biztime',geomesa.z3.interval='day'" -f 'point' --dtg 'biztime' --compression 'snappy'
+./geomesa-hbase create-schema -c 'findtest:test' -s "bizid:String:index=true,biztime:Date,*bizpoint:Point:srid=4326;geomesa.attr.splits='11',geomesa.indices='attr:8:3:bizid:geom:biztime',geomesa.z3.interval='day'" -f 'point' --dtg 'biztime' --compression 'snappy'
 
 ```
 
